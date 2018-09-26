@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'renren.spiders'
 #USER_AGENT = 'renren (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+# ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -44,7 +44,7 @@ DEFAULT_REQUEST_HEADERS = {
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
   # 'Accept-Language': 'en',
 }
-
+# 上面的是添加访问的额标识头，为防止被反爬虫！
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
@@ -65,8 +65,10 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+# 定义管道文件，也是同样可以自己添加管道文件的！后面的数字是管道文件的优先级。越小的优先级越高！
 ITEM_PIPELINES = {
    'renren.pipelines.ImagesPipeline': 300,
+#   'renren.pipelines.RenrenPipeline': 300,
 }
 # 定义存放图片的文件路径
 IMAGES_STORE = r'G:\Python\python projects\study\爬虫框架scrap\renren\renren\spiders\images'
