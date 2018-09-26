@@ -39,7 +39,7 @@ class ReSpider(scrapy.Spider):
             yield scrapy.FormRequest(url=url, formdata={"user_id": "1031003342@qq.com", "user_pw": "yier5719", "save_user_id": "1", "keep_cookie": "1",
                                                             "returnUrl": "/sc/", "direction": "N"}, callback=self.parse)
 #             yield scrapy.FormRequest(url, cookies = self.cookies, callback = self.parse_page)
-# 上面的是用cookies进行登录的但是必须在settings里面更改一下设置
+# 上面的是用cookies进行登录的但是必须在settings里面更改一下设置COOKIES_ENABLED = True,不然的话，是登录不了的！
 
 
     def parse(self, response):
