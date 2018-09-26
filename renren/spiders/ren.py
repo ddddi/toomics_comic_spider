@@ -4,7 +4,20 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from renren.items import RenrenItem
 
+"""
 
+
+
+
+ 弃用 弃用 弃用 弃用 弃用 弃用 弃用 弃用 弃用 
+
+
+
+
+
+
+"""
+# 不知道为什么使用crawlspider的模版的时候就是爬取不了，所以就放弃了，改用默认的spide模板！
 class RenSpider(CrawlSpider):
     name = 'ren'
     allowed_domains = ['global.toomics.com']
